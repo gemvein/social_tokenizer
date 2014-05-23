@@ -1,11 +1,9 @@
 Social Tokenizer
 ===========
 
-[![GitHub version](https://badge.fury.io/gh/nerakdon%2Fsocial_tokenizer.svg)](http://badge.fury.io/gh/nerakdon%2Fsocial_tokenizer)
-[![Build Status](https://travis-ci.org/nerakdon/social_tokenizer.svg)](https://travis-ci.org/nerakdon/social_tokenizer)
-[![Coverage Status](https://coveralls.io/repos/nerakdon/social_tokenizer/badge.png)](https://coveralls.io/r/nerakdon/social_tokenizer)
-
-Description goes here.
+[![GitHub version](https://badge.fury.io/gh/gemvein%2Fsocial_tokenizer.svg)](http://badge.fury.io/gh/gemvein%2Fsocial_tokenizer)
+[![Build Status](https://travis-ci.org/gemvein/social_tokenizer.svg)](https://travis-ci.org/gemvein/social_tokenizer)
+[![Coverage Status](https://coveralls.io/repos/gemvein/social_tokenizer/badge.png)](https://coveralls.io/r/gemvein/social_tokenizer)
 
 Contributing to Social Tokenizer
 ----------------------------
@@ -21,5 +19,5 @@ Contributing to Social Tokenizer
 Copyright
 ---------
 
-Copyright (c) 2014 Karen Lundgren. See LICENSE.txt for further details.
+Copyright (c) 2014 Gem Vein. See LICENSE.txt for further details.
 
