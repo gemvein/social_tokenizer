@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "social_tokenizer"
-  gem.homepage = "http://github.com/nerakdon/social_tokenizer"
+  gem.homepage = "http://github.com/gemvein/social_tokenizer"
   gem.license = "MIT"
-  gem.summary = %Q{This gem is just a template for future rails 4 gems.}
-  gem.description = %Q{This gem does not do anything yet, it is just a template.}
+  gem.summary = %Q{Tokenizes strings for use in social applications.}
+  gem.description = %Q{Tokenizes strings for use in social applications.}
   gem.email = "karen.e.lundgren@gmail.com"
   gem.authors = ["Karen Lundgren"]
   # dependencies defined in Gemfile
@@ -37,13 +37,3 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
 end
 
 task :default => :spec
-
-require 'rdoc/task'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "social_tokenizer #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
