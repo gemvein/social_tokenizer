@@ -1,8 +1,10 @@
 PATH
   remote: .
   specs:
-    social_tokenizer (0.0.0)
+    social_tokenizer (0.0.1)
+      activemodel (>= 4.1)
       social_tokenizer
+      tokenizer
 
 GEM
   remote: http://rubygems.org/
