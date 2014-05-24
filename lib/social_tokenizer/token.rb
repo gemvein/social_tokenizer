@@ -7,5 +7,11 @@ module SocialTokenizer
     def replaced_value
       value.gsub(token_type.pattern, token_type.replacement)
     end
+    def format(format_name=:text)
+      request.format = format_name
+      respond_to do |format|
+
+      end
+    end
   end
 end

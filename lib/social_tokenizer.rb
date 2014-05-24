@@ -7,7 +7,6 @@ require 'social_tokenizer/configuration'
 require 'social_tokenizer/version'
 require 'social_tokenizer/token'
 require 'social_tokenizer/tokenizer'
-require 'social_tokenizer/formatters'
 
 SocialTokenizer::TokenType.new(pattern: /^>(.*)$/, replacement: '\1', key: :message)
 SocialTokenizer::TokenType.new(pattern: /^\^(.*)$/, replacement: '\1', key: :group)
@@ -18,5 +17,8 @@ SocialTokenizer::TokenType.new(pattern: /^#(.*)$/, replacement: '\1', key: :tag)
 class String
   def social_tokenizer
     SocialTokenizer::Tokenizer.new(SocialTokenizer.configuration.lang).social_tokenize(self)
+  end
+  def social_formatter(format_name=:text)
+    SocialTokenizer::Tokenizer.new(SocialTokenizer.configuration.lang).social_format(self, format_name)
   end
 end

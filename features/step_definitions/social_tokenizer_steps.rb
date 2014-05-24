@@ -1,4 +1,4 @@
-Given /the String:/ do |input|
+Given /^the String:$/ do |input|
   @input = input.to_s
 end
 
@@ -32,3 +32,15 @@ And(/^the result should include:$/) do |table|
     @output[key.to_sym].map(&:replaced_value).should include value
   end
 end
+
+When(/^formatting the String as (.*)$/) do |format|
+  @format = format.to_sym
+  @output = @input.social_formatter(@format)
+end
+
+Then(/^I should receive the String:$/) do |string|
+  @output.should be_a String
+  @output.should == string
+end
+
+
