@@ -33,14 +33,3 @@ And(/^the result should include:$/) do |table|
   end
 end
 
-When(/^formatting the String as (.*)$/) do |format|
-  @format = format.to_sym
-  @output = @input.social_formatter(@format)
-end
-
-Then(/^I should receive the String:$/) do |string|
-  @output.should be_a String
-  @output.should == string
-end
-
-

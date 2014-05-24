@@ -7,15 +7,5 @@ module SocialTokenizer
 
       SocialTokenizer::TokenType.all
     end
-
-    def social_format(string, format_name=:text)
-      token_types = social_tokenize(string)
-      token_types.values do |tokens|
-        for token in tokens
-          string.tr!(token.value, token.format(format_name))
-        end
-      end
-      string
-    end
   end
 end

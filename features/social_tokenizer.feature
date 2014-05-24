@@ -19,14 +19,3 @@ Feature: Social Tokenizer
       |carbon     |carbon  |
       |mention    |mention |
       |tag        |tag     |
-
-  Scenario Outline: Format the social tokens from a string
-    When formatting the String as <format>
-    Then I should receive the String:
-      """
-      <body>
-      """
-    Examples:
-      |format|body|
-      |html|This contains a <a href="/messages/<message>">&gt;message</a>, a <a href="/groups/<group>">^group</a>, a <a href="/users/<carbon>">:carbon</a>, a <a href="/users/<mention>">@mention</a>, and a <a href="/tags/<tag>">#tag</a>|
-      |text|This contains a message, a group, a carbon, a mention, and a tag|
