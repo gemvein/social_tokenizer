@@ -5,6 +5,40 @@ Social Tokenizer
 [![Build Status](https://travis-ci.org/gemvein/social_tokenizer.svg)](https://travis-ci.org/gemvein/social_tokenizer)
 [![Coverage Status](https://coveralls.io/repos/gemvein/social_tokenizer/badge.png)](https://coveralls.io/r/gemvein/social_tokenizer)
 
+Installation
+------------
+First, add the gem to your Gemfile
+
+    gem 'social_tokenizer'
+
+Next, run the following commands
+
+    > bundle install
+    > rails g social_tokenizer:install
+
+Usage
+-----
+
+When chained onto the end of a string:
+
+    string_to_tokenize = 'This string contains a @mention and a #tag.'
+    hash_of_tokens = string_to_tokenize.social_tokenize
+
+By accessing the object directly:
+
+    lang = :de
+    social_tokenizer = SocialTokenizer::Tokenizer.new(lang)
+    hash_of_tokens = social_tokenizer.social_tokenize(self)
+
+Special configuration
+---------------------
+
+Arbitrary token types can be defined in `initializers/social_tokenizer.rb` like this:
+
+    SocialTokenizer::TokenType.new(pattern: /^\+(.*)$/, replacement: '\1', key: :rate_up)
+    SocialTokenizer::TokenType.new(pattern: /^\-(.*)$/, replacement: '\1', key: :rate_down)
+
+
 Contributing to Social Tokenizer
 ----------------------------
  
