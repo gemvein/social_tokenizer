@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "social_tokenizer"
-  gem.homepage = "http://github.com/gemvein/social_tokenizer"
+  gem.homepage = "http://www.gemvein.com/museum/cases/social_tokenizer"
   gem.license = "MIT"
   gem.summary = %Q{Tokenizes strings for use in social applications.}
   gem.description = %Q{Tokenizes strings for use in social applications.}
@@ -25,15 +25,11 @@ Jeweler::Tasks.new do |gem|
 end
 Jeweler::RubygemsDotOrgTasks.new
 
-require 'rspec/core'
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern = FileList['spec/**/*_spec.rb']
+require 'cucumber'
+require 'cucumber/rake/task'
+
+Cucumber::Rake::Task.new(:features) do |t|
+  t.profile = 'ci'
 end
 
-RSpec::Core::RakeTask.new(:rcov) do |spec|
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
-end
-
-task :default => :spec
+task :default => :features
