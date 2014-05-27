@@ -3,6 +3,7 @@ coverage
 coverage.data
 .idea
 .idea/*
+Gemfile.lock
 
 # rdoc generated
 rdoc
