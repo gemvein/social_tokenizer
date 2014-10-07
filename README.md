@@ -1,7 +1,7 @@
 Social Tokenizer
 ===========
 
-[![GitHub version](https://badge.fury.io/gh/gemvein%2Fsocial_tokenizer.svg)](http://badge.fury.io/gh/gemvein%2Fsocial_tokenizer)
+[![Gem Version](https://badge.fury.io/rb/social_tokenizer.svg)](http://badge.fury.io/rb/social_tokenizer)
 [![Build Status](https://travis-ci.org/gemvein/social_tokenizer.svg)](https://travis-ci.org/gemvein/social_tokenizer)
 [![Coverage Status](https://coveralls.io/repos/gemvein/social_tokenizer/badge.png)](https://coveralls.io/r/gemvein/social_tokenizer)
 
