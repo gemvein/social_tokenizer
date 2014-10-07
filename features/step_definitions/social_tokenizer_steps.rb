@@ -1,3 +1,9 @@
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]  # default, enables both `should` and `expect`
+  end
+end
+
 Given /^the String:$/ do |input|
   @input = input.to_s
 end
@@ -8,7 +14,7 @@ end
 
 Then(/^the result should be a Hash with (\d+) key\-value pairs$/) do |num|
   @output.should be_a Hash
-  @output.should have_at_least(num).items
+  @output.count.should be >= num
 end
 
 And(/^each of its keys should be a symbol denoting the type of social token$/) do
