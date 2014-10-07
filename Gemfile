@@ -5,7 +5,7 @@ source "http://rubygems.org"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
-gem 'activemodel', '>= 4.1'
-gem 'tokenizer'
+gem 'activemodel', '~> 4.1'
+gem 'tokenizer', '~> 0.1'
 
 gemspec
